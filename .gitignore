@@ -1,0 +1,19 @@
+# Local runtime data — never commit: may contain your API key and your prompts.
+settings.json
+history.json
+
+# Output clips and scratch files
+*.mp4
+*.remux.mp4
+
+# Tooling
+node_modules/
+.pnpm-store/
+*.log
+.DS_Store
+Thumbs.db
+
+# Editors
+.idea/
+.vscode/
+*.swp

@@ -1,0 +1,60 @@
+{
+  "name": "dsh-tiiny-video",
+  "version": "1.0.0",
+  "description": "Tiiny Video for DeepSeek Harness: write a prompt, optionally attach a first frame, and a MiniMax video model running on your Tiiny device renders the clip to disk.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Tiiny",
+  "homepage": "https://github.com/triskn/dsh-tiiny-video#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/triskn/dsh-tiiny-video.git"
+  },
+  "bugs": {
+    "url": "https://github.com/triskn/dsh-tiiny-video/issues"
+  },
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "dsh",
+    "tiiny",
+    "video",
+    "text-to-video",
+    "image-to-video",
+    "minimax"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg"
+  ],
+  "scripts": {
+    "test": "node --test"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    }
+  }
+}

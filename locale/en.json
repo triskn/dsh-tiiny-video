@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Tiiny Video",
+    "description": "Generates video with the local MiniMax model on your Tiiny: write a prompt, optionally attach a first-frame image, and the clip is rendered on the device and saved to disk."
+  }
+}
